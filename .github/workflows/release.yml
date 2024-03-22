@@ -7,7 +7,7 @@ on:
 
 jobs:
   npm:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
 
   github:
-    runs-on: windows-2022
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
