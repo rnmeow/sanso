@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - src/**
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - .prettierrc.toml
+      - .github/workflows/ci.yml
 
 jobs:
   ci:
