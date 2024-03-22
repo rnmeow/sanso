@@ -6,7 +6,7 @@
 
 > Sanso is required for Hono, but we do not use require.
 
-This package provides useful utils, helpers, middlewares (or more) for Hono.
+To provide useful extensions for Hono.
 
 Note: Under development.  
 Be careful of possible breaking changes until ver. 1 released.
