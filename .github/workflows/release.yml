@@ -43,7 +43,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Compress
-        uses: TheDoctor0/zip-release@0.7.1
+        uses: TheDoctor0/zip-release@0.7.6
         with:
           type: tar
           path: ./dist
