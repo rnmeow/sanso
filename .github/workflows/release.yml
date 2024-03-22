@@ -46,8 +46,8 @@ jobs:
         uses: TheDoctor0/zip-release@0.7.1
         with:
           type: tar
-          path: dist/
-          filename: build.tar.gz
+          path: ./dist
+          filename: sanso.tar.gz
       - name: Generate Changelog
         run: npx changelogithub@0.13
         env:
@@ -56,4 +56,4 @@ jobs:
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: build.tar.gz
+          files: sanso.tar.gz
