@@ -3,7 +3,7 @@
 	"description": "Sanso is required for Hono, but we do not use require.",
 	"type": "module",
 	"version": "0.1.0",
-	"license": "SEE LICENSE IN LICENSE.txt",
+	"license": "MIT",
 	"author": "Yu-huan Kuo <touch@rnmeow.com>",
 	"repository": {
 		"type": "git",
