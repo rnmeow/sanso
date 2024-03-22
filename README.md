@@ -1,5 +1,9 @@
 # Sanso
 
+[![GitHub CI](https://github.com/rnmeow/sanso/actions/workflows/ci/badge.svg)](https://github.com/rnmeow/sanso/actions?query=workflow%3ACI)
+[![NPM Version](https://badgen.net/npm/v/sanso)](https://www.npmjs.com/package/sanso)
+[![Install Size](https://packagephobia.com/badge?p=sanso)](https://packagephobia.com/result?p=sanso)
+
 > Sanso is required for Hono, but we do not use require.
 
 This package provides useful utils, helpers, middlewares (or more) for Hono.
