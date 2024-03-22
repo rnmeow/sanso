@@ -1,4 +1,4 @@
 export {
 	trimTrailingSlash,
 	appendTrailingSlash,
-} from './middlewares/trailing-slash'
+} from './middlewares/trailing_slash'
