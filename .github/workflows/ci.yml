@@ -30,6 +30,6 @@ jobs:
       - name: Install Deps
         run: npm ci
       - name: Test Format
-        run: npm run format
+        run: npm run format:check
       - name: Test Build
         run: npm run build
