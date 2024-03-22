@@ -33,7 +33,7 @@ jobs:
           path: dist/
           filename: build.tar.gz
       - name: Generate Changelog
-        run: npx changelogithub@0.12
+        run: npx changelogithub@0.13
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release on GitHub
