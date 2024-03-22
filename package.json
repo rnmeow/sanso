@@ -13,7 +13,8 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"format": "prettier ./src --write",
+		"format": "prettier ./src",
+		"format:fix": "prettier ./src --write",
 		"bump": "bumpp"
 	},
 	"dependencies": {
