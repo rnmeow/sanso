@@ -1,6 +1,6 @@
 # Sanso
 
-[![GitHub CI](https://github.com/rnmeow/sanso/actions/workflows/ci/badge.svg)](https://github.com/rnmeow/sanso/actions?query=workflow%3ACI)
+[![GitHub CI](https://github.com/rnmeow/sanso/actions/workflows/ci.yml/badge.svg)](https://github.com/rnmeow/sanso/actions?query=workflow%3ACI)
 [![NPM Version](https://badgen.net/npm/v/sanso)](https://www.npmjs.com/package/sanso)
 [![Install Size](https://packagephobia.com/badge?p=sanso)](https://packagephobia.com/result?p=sanso)
 
