@@ -4,11 +4,13 @@ import type { Env, MiddlewareHandler } from 'hono/types'
 
 /**
  * Trim the trailing slash from the URL if it does have one. This is only used when the route is set without a trailing slash.
- * @example hono.use(trimTrailingSlash())
+ * @example const app = new Hono()
+ * app.use(trimTrailingSlash())
+ * // routes...
  */
 export function trimTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 	return createMiddleware(async (ctx, next) =>
-		ctx.req.path.endsWith('/') && ctx.req.path !== '/'
+		ctx.req.path[ctx.req.path.length - 1] === '/' && ctx.req.path !== '/'
 			? ctx.redirect(ctx.req.url.replace(/\/$/, ''))
 			: await next(),
 	)
@@ -16,10 +18,14 @@ export function trimTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 
 /**
  * Append a trailing slash to the URL if it does not have one. This is only used when the route is set with a trailing slash.
- * @example hono.use(appendTrailingSlash())
+ * @example const app = new Hono()
+ * app.use(appendTrailingSlash())
+ * // routes...
  */
 export function appendTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 	return createMiddleware(async (ctx, next) =>
-		!ctx.req.url.endsWith('/') ? ctx.redirect(`${ctx.req.url}/`) : await next(),
+		ctx.req.path[ctx.req.path.length - 1] !== '/'
+			? ctx.redirect(`${ctx.req.url}/`)
+			: await next(),
 	)
 }
