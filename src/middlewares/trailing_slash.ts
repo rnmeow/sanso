@@ -5,8 +5,10 @@ import type { Env, MiddlewareHandler } from 'hono/types'
 /**
  * Trim the trailing slash from the URL if it does have one. This is only used when the route is set without a trailing slash.
  * @example const app = new Hono()
+ *
  * app.use(trimTrailingSlash())
- * // routes...
+ *
+ * // routes ...
  */
 export function trimTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 	return createMiddleware(async (ctx, next) =>
@@ -19,8 +21,10 @@ export function trimTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 /**
  * Append a trailing slash to the URL if it does not have one. This is only used when the route is set with a trailing slash.
  * @example const app = new Hono()
- * app.use(appendTrailingSlash())
- * // routes...
+ *
+ * app.use(trimTrailingSlash())
+ *
+ * // routes ...
  */
 export function appendTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 	return createMiddleware(async (ctx, next) =>
