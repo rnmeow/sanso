@@ -11,7 +11,7 @@ import type { Env, MiddlewareHandler } from 'hono/types'
 export function trimTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 	return createMiddleware(async (ctx, next) =>
 		ctx.req.path[ctx.req.path.length - 1] === '/' && ctx.req.path !== '/'
-			? ctx.redirect(ctx.req.url.substring(0, ctx.req.url.length - 1))
+			? ctx.redirect(ctx.req.url.substring(0, ctx.req.url.length - 1), 301)
 			: await next(),
 	)
 }
@@ -25,7 +25,7 @@ export function trimTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 export function appendTrailingSlash(): MiddlewareHandler<Env, never, {}> {
 	return createMiddleware(async (ctx, next) =>
 		ctx.req.path[ctx.req.path.length - 1] !== '/'
-			? ctx.redirect(`${ctx.req.url}/`)
+			? ctx.redirect(`${ctx.req.url}/`, 301)
 			: await next(),
 	)
 }
