@@ -28,7 +28,7 @@ export function trimTrailingSlash(): MiddlewareHandler {
  */
 export function appendTrailingSlash(): MiddlewareHandler {
 	return createMiddleware(async (ctx, next) =>
-		ctx.req.path[ctx.req.path.length - 1] !== '/'
+		ctx.req.path[ctx.req.path.length - 1] !== '/' && ctx.req.path.indexOf('.') === -1
 			? ctx.redirect(`${ctx.req.url}/`, 301)
 			: await next(),
 	)
