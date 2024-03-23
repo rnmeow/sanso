@@ -1,6 +1,6 @@
 import { createMiddleware } from 'hono/factory'
 
-import type { Env, MiddlewareHandler } from 'hono/types'
+import type { MiddlewareHandler } from 'hono/types'
 
 /**
  * Trim the trailing slash from the URL if it does have one. This is only used when the route is set without a trailing slash.
