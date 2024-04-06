@@ -1,5 +1,9 @@
 # Sanso
 
+> [!IMPORTANT]  
+> This package is no longer needed since the provided middlewares are already built in hono 4.2+.  
+> For more information, visit <https://hono.dev/middleware/builtin/trailing-slash>.
+
 [![GitHub CI](https://github.com/rnmeow/sanso/actions/workflows/ci.yml/badge.svg)](https://github.com/rnmeow/sanso/actions?query=workflow%3ACI)
 [![NPM Version](https://badgen.net/npm/v/sanso)](https://www.npmjs.com/package/sanso)
 [![Install Size](https://packagephobia.com/badge?p=sanso)](https://packagephobia.com/result?p=sanso)
