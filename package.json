@@ -18,7 +18,7 @@
 		"bump": "bumpp"
 	},
 	"dependencies": {
-		"hono": "^4.1.3"
+		"hono": "^4.12.14"
 	},
 	"devDependencies": {
 		"bumpp": "^9.4.0",
